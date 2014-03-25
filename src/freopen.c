@@ -58,6 +58,7 @@ FILE *freopen(const char *filename, const char *mode, FILE *stream)
     stream->hFile = INVALID_HANDLE_VALUE;
     stream->unget = -1;
 
+    // BUGBUG: mode never checked for NULL or length
     switch (mode[0])
     {
     case 'r':
